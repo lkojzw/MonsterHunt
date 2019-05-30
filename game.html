@@ -68,7 +68,7 @@
 			function plusReady() { //这里是每次进入应用都会显示引导页，开发中要如何显示引导页视具体的情况而定。
 				setTimeout(function(){
 					plus.screen.lockOrientation("landscape-primary");
-				},1000);
+				},300);
 				var game = plus.webview.create('http://flash1.7k7k.com/h5/2016/gwbzxd/index.htm', "game");
 				game.setStyle({
 					"popGesture": "none"
