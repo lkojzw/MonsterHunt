@@ -14,30 +14,23 @@
   <div class="bounce3"></div>
 </div>
 		<script type="text/javascript">
+			
 			if (window.plus) {
 				plusReady()
 			} else {
 				document.addEventListener('plusready', plusReady, false)
 			}
 			function plusReady() { //这里是每次进入应用都会显示引导页，开发中要如何显示引导页视具体的情况而定。
-				window.onload=function(){
-					console.log(123);
-     plus.screen.lockOrientation("landscape");
-}
-// 				var game = plus.webview.open('http://flash1.7k7k.com/h5/2016/gwbzxd/index.htm',"game","","","",function(){
-// 					window.onload=function(){
-// 						alert(1);
-// 						plus.screen.lockOrientation("landscape-primary");
-// 					}
-					
-// 				});
-// 				//var game = plus.webview.create('http://flash1.7k7k.com/h5/2016/gwbzxd/index.htm', "game");
-// 				game.setStyle({
-// 					"popGesture": "none"
-// 				});
+				setTimeout(function(){
+					plus.screen.lockOrientation("landscape-primary");
+				},1000);
+				var game = plus.webview.create('http://flash1.7k7k.com/h5/2016/gwbzxd/index.htm', "game");
+				game.setStyle({
+					"popGesture": "none"
+				});
+				game.show();
 				
 			}
-			
 		</script>
 	</body>
 
